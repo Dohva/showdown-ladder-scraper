@@ -1,4 +1,4 @@
-# showdown-ladder-scraper
+# Showdown Ladder Scraper
 This repo scrapes Pokemon Showdown for leaderboard statistics for the current generation.
 Statistics are stored in the /data folder, and changes can be tracked through version control.
 
