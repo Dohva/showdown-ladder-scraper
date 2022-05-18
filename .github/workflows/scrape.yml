@@ -12,7 +12,10 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch latest data
       run: |-
-        curl "https://play.pokemonshowdown.com/ladder.php?format=gen8ou&server=showdown&output=html&prefix=" > gen8ou.html
+        formats="gen8ou gen8randombattle"
+        for format in $formats; do
+          curl "https://play.pokemonshowdown.com/ladder.php?format=$format&server=showdown&output=html&prefix=" > $format.html
+        done
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
